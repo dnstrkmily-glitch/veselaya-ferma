@@ -1,0 +1,31 @@
+<!doctype html>
+<html язык="ру">
+<голова>
+<мета набор символов="утф-8"><мета имя="область просмотра" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#5bc8ff">
+<заголовок>Весёлая ферма</заголовок>
+<стиль>
+:корень{--зеленый:#78d34b;--желтый:#ffd329;--коричневый:#8a4b20;--sky:#69ceff}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;font-family:system-ui,-apple-system,sans-serif;overflow:hidden}body{background:linear-gradient(#58c7ff 0 43%,#b5eb79 43% 100%);color:#4b2a13}.screen{height:100dvh;width:100%;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:18px 16px 22px;overflow:hidden}.cloud{position:absolute;font-size:52px;opacity:.8;pointer-events:none}.c1{top:8%;left:3%}.c2{top:12%;right:4%}.title{z-index:1;margin-top:10px;background:#9a571f;border:5px solid #6d3517;color:#ffdf28;text-shadow:2px 3px #6d3517;padding:12px 20px;border-radius:22px;font-weight:1000;font-size:clamp(28px,8vw,46px);text-align:center;line-height:1.08;box-shadow:0 6px #62300e}.title span{display:block;color:#fff8df}.scene{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}.barn{position:absolute;top:30%;font-size:clamp(110px,34vw,180px);filter:drop-shadow(0 5px 1px #78441f)}.fence{position:absolute;top:55%;font-size:35px;white-space:nowrap;opacity:.8}.grass{position:absolute;bottom:0;height:28%;width:100%;background:linear-gradient(#82d84e,#48b943);border-radius:50% 50% 0 0 / 12% 12% 0 0}.animal-card{z-index:2;position:absolute;top:29%;left:50%;transform:translateX(-50%);width:min(78vw,330px);min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff9e9;border:5px solid #f6bd4b;border-radius:32px;box-shadow:0 9px 0 #b9792b;padding:14px 10px}.animal{font-size:clamp(100px,30vw,150px);line-height:1.15;filter:drop-shadow(0 5px 1px #d6c4a5)}.animal-name{font-size:clamp(27px,7vw,38px);font-weight:950;color:#6c3a17;text-align:center}.sound{font-size:17px;font-weight:700;color:#8b6a42;margin-top:3px}.button-area{z-index:5;position:absolute;bottom:20px;left:0;width:100%;display:flex;flex-direction:column;align-items:center;gap:8px}.next{width:76px;height:76px;border-radius:50%;border:5px solid #b84313;background:radial-gradient(circle at 35% 25%,#fff89a 0 8%,#ffe744 28%,#ffb800 75%);box-shadow:0 5px 0 #7d3512;display:grid;place-items:center;font-size:31px;cursor:pointer;touch-action:manipulation}.next:active{transform:translateY(3px);box-shadow:0 2px 0 #7d3512}.hint{font-size:13px;font-weight:800;color:#fff;text-shadow:0 2px 3px #39792а;background:#347b2c99;padding:4px 10px;border-radius:12px}.counter{position:absolute;z-index:3;top:14px;right:14px;background:#fff9e9;border:3px solid #f6bd4b;border-radius:18px;padding:5px 10px;font-weight:900;color:#74421b}.speaker{position:absolute;z-index:5;top:14px;left:14px;border:0;border-radius:50%;width:46px;height:46px;font-size:23px;background:#fff9e9;box-shadow:0 3px #b9792b;cursor:pointer}.start{position:absolute;inset:0;z-index:10;background:#60c7ff url('farm-cover.png') center/cover no-repeat;display:flex;align-items:flex-end;justify-content:center;padding-bottom:7vh}.start button{font-size:22px;font-weight:950;background:#ffdb27;border:5px solid #b84313;border-radius:24px;padding:14px 28px;color:#6c3516;box-shadow:0 6px #7d3512;cursor:pointer}.hidden{display:none!important}.tiny{position:absolute;bottom:104px;font-size:12px;color:#fff;text-shadow:0 1px 3px #23651б;z-index:2}
+</стиль></голова>
+<тело>
+<основной класс="экран">
+ <див класс="сцена"><див класс="трава"></див><div class="barn">🏡</div><div class="fence">🪵 🪵 🪵 🪵 🪵 🪵</div></div>
+ <див класс="облако с1">☁️</див><див класс="облако с2">☁️</div>
+ <див класс="название">Весёлая <охватывать>ферма</охватывать></div>
+ <кнопка класс="спикер" идентификатор="soundToggle" ария-этикетка="Включить или выключить озвучку">🔊</button>
+ <див класс="прилавок" идентификатор="прилавок">1 / 20</див>
+ <раздел класс="животное-карта" ария-вживую="вежливый"><div class="animal" id="animal">🐮</div><div class="animal-name" id="animalName">Корова</div><div class="sound" id="animalSound">Говорит: «Му-у!»</div></section>
+ <див класс="крошечный">Нажми на жёлтую кнопку!</div>
+ <див класс="зона кнопок"><кнопка класс="следующий" id="next" aria-label="Следующее животное">▶️</button><div class="hint">СЛЕДУЮЩЕЕ ЖИВОТНОЕ</div></div>
+ <див класс="старт" идентификатор="старт"><кнопка идентификатор="стартБтн">🐾 Начать игру!</button></div>
+</основной>
+<сценарий>
+константа животные=[
+ ['🐮','Корова',«Му-у!»],['🐷','Свинья',«Хрю-хрю!»],['🐴','Лошадь','И-го-го!'],['🐑','Овечка','Бе-е!'],['🐐','Коза','Ме-е!'],['🐔','Курица','Ко-ко-ко!'],['🐓','Петух','Ку-ка-ре-ку!'],['🦆','Утка','Кря-кря!'],['🪿','Гусь','Га-га-га!'],['🐕','Собака','Гав-гав!'],['🐈','Кошка','Мяу!'],['🐇','Кролик','Прыг-прыг!'],['🐎','Пони','И-го-го!'],['🐄','Бычок','Му-у!'],['🐣','Цыплёнок','Пи-пи-пи!'],['🫏','Ослик','И-а!'],['🦃','Индюк','Буль-буль!'],['🐭','Мышка','Пи-пи!'],['🐸','Лягушка','Ква-ква!'],['🐝','Пчёлка','Ж-ж-ж!']
+];позволять индекс=0,голосВкл=истинный,начал=ложный;
+константа $=идентификатор=>документ.getElementById(идентификатор);
+функция говорить(текст){если(!голосВкл||!(«синтез речи»in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='ru-RU';u.rate=.82;u.pitch=1.12;speechSynthesis.speak(u)}
+функция показывать(i,объявлять=истинный){индекс=(i+животные.length)%animals.length;const a=animals[index];$('animal').textContent=a[0];$('animalName').textContent=a[1];$('animalSound').textContent='Говорит: «'+a[2]+'»';$('counter').textContent=(index+1)+' / '+animals.length;if(announce)speak(a[1]+'! '+a[2]);}
+$('startBtn').addEventListener('нажмите',()=>{$('start').classList.add('hidden');started=true;show(0,true)});
+$('следующий').addEventListener('нажмите',()=>{если(!started){$('start').classList.add('hidden');started=true;show(0,true)}else show(index+1,true)});
+$('soundToggle').addEventListener('нажмите',()=>{voiceOn=!voiceOn;$('soundToggle').textContent=voiceOn?'🔊':'🔇';if(!voiceOn&&'speechSynthesis'in window)speechSynthesis.cancel();else if(started)speak(animals[index][1]+'! '+animals[index][2]);});
+</сценарий></тело></html>
