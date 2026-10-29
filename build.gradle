@@ -1,4 +1,4 @@
 
-плагины {
-    идентификатор 'com.android.application' версия '8.7.3' применять false
+plugins {
+    id 'com.android.application' version '8.7.3' apply false
 }
