@@ -1,0 +1,22 @@
+{"<"}?xml версия="1.0" версия="utf-8"?{">"}
+{"<"}manifest xmlns:android="http://schemas.android.com/apk/res/android"{">"}
+
+    {"<"}приложение
+        android:allowBackup="true"
+        android:label="Вѵсёлая ферма"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar"
+        android:usesCleartextTraffic="true"{">"}
+
+        {"<"}активность
+            android:name=".Основная деятельность"
+            android:exported="true"{">"}
+
+            {"<"}intent-filter{">"}
+                {"<"}action android:name="android.intent.action.MAIN" />
+                {"<"}категория android:name="android.intent.category.LAUNCHER" />
+            {"<"}/intent-filter{">"}
+
+        {"<"}/активность{">"}
+    {"<"}/приложение{">"}
+
+{"<"}/манифест{">"}
