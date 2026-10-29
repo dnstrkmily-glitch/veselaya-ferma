@@ -1,0 +1,16 @@
+плагины {
+    идентификатор 'com.android.application'
+}
+
+андроид {
+    пространство имен 'ru.veselayaferma.app'
+    compileSdk 35
+
+    defaultConfig {
+        идентификатор приложения 'ru.veselayaferma.app'
+        минСдк 23
+        targetSdk 28
+        версияКод 1
+        имя версии '1.0'
+    }
+}
